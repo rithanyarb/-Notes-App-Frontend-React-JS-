@@ -9,25 +9,37 @@ const Notes = ({ token, handleLogout }) => {
   const [editingNote, setEditingNote] = useState(null);
 
   const fetchNotes = async () => {
-    const res = await api.get("/notes/notes/");
-    setNotes(res.data);
+    try {
+      const res = await api.get("/notes/");
+      setNotes(res.data);
+    } catch (error) {
+      console.error("Error fetching notes:", error);
+    }
   };
 
   const handleNoteCreate = async (e) => {
     e.preventDefault();
-    if (editingNote) {
-      await api.put(`/notes/notes/${editingNote.note_id}/`, noteData);
-      setEditingNote(null);
-    } else {
-      await api.post("/notes/notes/", noteData);
+    try {
+      if (editingNote) {
+        await api.put(`/notes/${editingNote.note_id}/`, noteData);
+        setEditingNote(null);
+      } else {
+        await api.post("/notes/", noteData);
+      }
+      fetchNotes();
+      setNoteData({ title: "", content: "" });
+    } catch (error) {
+      console.error("Error creating/updating note:", error);
     }
-    fetchNotes();
-    setNoteData({ title: "", content: "" });
   };
 
   const handleNoteDelete = async (id) => {
-    await api.delete(`/notes/notes/${id}/`);
-    fetchNotes();
+    try {
+      await api.delete(`/notes/${id}/`);
+      fetchNotes();
+    } catch (error) {
+      console.error("Error deleting note:", error);
+    }
   };
 
   const handleNoteUpdate = (note) => {
