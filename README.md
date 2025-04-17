@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# 📝 Notes App Frontend (React JS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the **frontend** of the full-stack Notes application built with **React**. It communicates with a **FastAPI backend** and uses **JWT authentication**. The UI is responsive and styled with **Bootstrap**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Getting Started
 
-### `npm start`
+### 🔧 Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make sure the following are installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) 
+  Nodejs - v18.17.0
+- `npm` (comes with Node.js)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📦 Installation
 
-### `npm run build`
+```bash
+# Navigate to the frontend directory
+cd react_fastapi/react/myapp
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ▶️ Run the App
 
-### `npm run eject`
+```bash
+# Start the development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔗 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧰 Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React**
+- **Bootstrap**
+- **Axios** (for making API calls)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📂 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+📁 myapp/
+├── 📂src/
+│   ├── 📂components/
+│   │   ├── Login.js
+│   │   ├── NoteForm.js
+│   │   ├── NoteItem.js
+│   │   ├── Notes.js
+│   │   └── Register.js
+│   └── ...
+├── App.js           # Main React component
+├── api.js           # Axios configuration
+└── ...
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🔐 Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- User Authentication – includes user login, registration, and secure access using JWT
+- Notes Management – users can view, add, edit, and delete their personal notes
+- Protected Routes – only authenticated users can access note-related pages
+- JWT Token Storage – token is stored in local storage for persistent sessions
+- Responsive UI – clean and intuitive interface built with React and Bootstrap
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 👥 Sample Users
 
-### Advanced Configuration
+| Username     | Password |
+| ------------ | -------- |
+| `rbrithanya` | `12345`  |
+| `vidarshana` | `pass7`  |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📸 Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Login Page**  
+<img src="https://github.com/user-attachments/assets/b4ac8eac-fd54-408f-8af8-3a6d227b1411" width="600">
 
-### `npm run build` fails to minify
+**Register Page**  
+<img src="https://github.com/user-attachments/assets/b4bf6b86-df5a-4eed-9bca-6bc2d6a3ce18" width="600">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Note Taking Page**  
+<img src="https://github.com/user-attachments/assets/28c612e6-d6a3-45a7-b3f9-79a5ab6c411a" width="600">
+
+---
+
+## ✍️ Author
+
+Made with ❤️ by **RB Rithanya**
+
+---
+
+## 📜 License
+
+Free to use for personal and educational purposes.
+
+---
