@@ -1,4 +1,4 @@
-# 📝 Notes App Frontend (React)
+# 📝 Notes App Frontend (React JS)
 
 This is the **frontend** of the full-stack Notes application built with **React**. It communicates with a **FastAPI backend** and uses **JWT authentication**. The UI is responsive and styled with **Bootstrap**.
 
